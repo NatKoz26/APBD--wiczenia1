@@ -26,9 +26,10 @@ namespace ProstaAplikacja
             
         }
 
-        //funkcje sprawdzenia poprawności: nie chcemy cyfr w imieniu 
+        //funkcje sprawdzenia poprawności: nie chcemy cyfr w imieniu, ale dopuszczamy znaki - i \
         static bool PoprawneImie(string imie)
-        {
+        {   if (imie.Length < 5)
+            return false;
             foreach(char znak in imie)
             {
                 if(!char.IsLetter(znak) && znak != '-' && znak != '\'')
