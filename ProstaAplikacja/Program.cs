@@ -102,8 +102,7 @@ namespace ProstaAplikacja
 
                 return max;
         }   
-
-        static int CalculateMin(int[] values)
+               static int CalculateMin(int[] values)
         {
             
             if (values == null || values.Length == 0)
@@ -122,4 +121,5 @@ namespace ProstaAplikacja
             return min;
         }
     }
+
     }
