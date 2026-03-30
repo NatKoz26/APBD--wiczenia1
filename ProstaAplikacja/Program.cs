@@ -11,13 +11,18 @@ namespace ProstaAplikacja
 
             string imie = PobierzISprawdzImie();
             Console.WriteLine($"Cześć, {imie}!");
-            PytanieOPomysly(imie);
+            
 
             int[] liczby = { 2, 4, 6, 8 };
 
             double srednia = CalculateAverage(liczby);
 
             Console.WriteLine($"Średnia wynosi: {srednia}");
+            int max = CalculateMax(liczby);
+
+            Console.WriteLine($"Maksymalna wartość: {max}");
+
+            PytanieOPomysly(imie);
             
         }
 
@@ -80,5 +85,22 @@ namespace ProstaAplikacja
 
             return (double)suma / values.Length;
         }
+        static int CalculateMax(int[] values)
+        {
+             if (values == null || values.Length == 0)
+            throw new ArgumentException("Tablica nie może być pusta.");
+
+            int max = values[0];
+
+            foreach (int v in values)
+                {
+                if (v > max)
+                    {
+                     max = v;
+                    }
+                }
+
+                return max;
+        }   
     }
     }
