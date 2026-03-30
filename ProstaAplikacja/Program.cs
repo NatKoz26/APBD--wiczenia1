@@ -102,5 +102,24 @@ namespace ProstaAplikacja
 
                 return max;
         }   
+
+        static int CalculateMin(int[] values)
+        {
+            
+            if (values == null || values.Length == 0)
+                throw new ArgumentException("Tablica nie może być pusta.");
+
+            int min = values[0];
+
+            foreach (int v in values)
+            {
+                if (v < min)
+                {
+                    min = v;
+                }
+            }
+
+            return min;
+        }
     }
     }
