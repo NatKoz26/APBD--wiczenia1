@@ -101,6 +101,10 @@ namespace ProstaAplikacja
                 }
 
                 return max;
-        }   
+        }
+        static int CalculateMin(int[] values)
+        {
+        }  
     }
+
     }
