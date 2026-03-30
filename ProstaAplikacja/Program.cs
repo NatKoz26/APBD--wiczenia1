@@ -20,7 +20,7 @@ namespace ProstaAplikacja
         {
             foreach(char znak in imie)
             {
-                if(char.IsDigit(znak))
+                if(!char.IsLetter(znak))
                 {return false;}
 
             }
@@ -38,7 +38,7 @@ namespace ProstaAplikacja
                     return imie;
                 }
 
-                Console.WriteLine("Błąd: imię nie może zawierać cyfr. Spróbuj ponownie.\n");
+                Console.WriteLine("Błąd: imię nie może zawierać cyfr,znaków specjalnych, ani być puste. Spróbuj ponownie.\n");
             }
         }
     }
