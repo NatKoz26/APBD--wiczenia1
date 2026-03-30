@@ -28,14 +28,15 @@ namespace ProstaAplikacja
 
         //funkcje sprawdzenia poprawności: nie chcemy cyfr w imieniu 
         static bool PoprawneImie(string imie)
-        {
+        {   if (string.IsNullOrWhiteSpace(imie) || imie.Length <= 3)
+                return false;
             foreach(char znak in imie)
             {
                 if(!char.IsLetter(znak))
                 {return false;}
 
             }
-            return !string.IsNullOrWhiteSpace(imie);
+            return true;
         }
          static string PobierzISprawdzImie()
         {
