@@ -26,7 +26,7 @@ namespace ProstaAplikacja
             
         }
 
-        //funkcje sprawdzenia poprawności: nie chcemy cyfr w imieniu 
+        //funkcje sprawdzenia poprawności: nie chcemy cyfr w imieniu - i niedopuszczamy krótszych imion niż 3
         static bool PoprawneImie(string imie)
         {   if (string.IsNullOrWhiteSpace(imie) || imie.Length <= 3)
                 return false;
