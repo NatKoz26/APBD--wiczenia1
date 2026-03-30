@@ -12,6 +12,12 @@ namespace ProstaAplikacja
             string imie = PobierzISprawdzImie();
             Console.WriteLine($"Cześć, {imie}!");
             PytanieOPomysly(imie);
+
+            int[] liczby = { 2, 4, 6, 8 };
+
+            double srednia = CalculateAverage(liczby);
+
+            Console.WriteLine($"Średnia wynosi: {srednia}");
             
         }
 
