@@ -60,7 +60,19 @@ namespace ProstaAplikacja
             }
             
         }
-    }
+        static double CalculateAverage(int[] values)
+        {
+            if (values == null || values.Length == 0)
+            throw new ArgumentException("Tablica nie może być pusta.");
 
-    
-}
+            int suma = 0;
+
+             foreach (int v in values)
+            {
+                 suma += v;
+             }
+
+            return (double)suma / values.Length;
+        }
+    }
+    }
