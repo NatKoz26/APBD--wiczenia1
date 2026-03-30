@@ -11,7 +11,7 @@ namespace ProstaAplikacja
 
             string imie = PobierzISprawdzImie();
             Console.WriteLine($"Cześć, {imie}!");
-
+            PytanieOPomysly(imie);
             
         }
 
@@ -40,6 +40,25 @@ namespace ProstaAplikacja
 
                 Console.WriteLine("Błąd: imię nie może zawierać cyfr,znaków specjalnych, ani być puste. Spróbuj ponownie.\n");
             }
+        }
+        //pytanie o pomysl na te aplikacje 
+        static void PytanieOPomysly(string imie)
+        {
+            Console.WriteLine("Nie mam pojecia co moze robic ta aplikacja, podasz mi prosze pomysl?");
+            string pomysl = Console.ReadLine();
+            string sciezka = "pomysly.txt";
+            string wpis = $"{DateTime.Now} | {imie}: {pomysl}";
+
+             try
+            {
+                File.AppendAllText(sciezka, wpis + Environment.NewLine);
+                Console.WriteLine("Zapisano pomysł do pliku!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Wystąpił błąd podczas zapisu: " + ex.Message);
+            }
+            
         }
     }
 
