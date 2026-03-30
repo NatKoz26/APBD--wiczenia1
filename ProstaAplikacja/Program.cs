@@ -5,7 +5,12 @@ namespace ProstaAplikacja
         static void Main(string[] args)
         {
             Console.WriteLine("witaj!");
-            //nie mam pomysłu 
+            
+            //Pierwsza funkcjonalność
+            Console.Write("Podaj swoje imie: ");
+            string imie = Console.ReadLine();
+
+            
         }
     }
 
