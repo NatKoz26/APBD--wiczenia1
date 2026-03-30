@@ -31,7 +31,7 @@ namespace ProstaAplikacja
         {
             foreach(char znak in imie)
             {
-                if(!char.IsLetter(znak))
+                if(!char.IsLetter(znak) && znak != '-' && znak != '\'')
                 {return false;}
 
             }
