@@ -12,6 +12,12 @@ namespace ProstaAplikacja
             string imie = PobierzISprawdzImie();
             Console.WriteLine($"Cześć, {imie}!");
             PytanieOPomysly(imie);
+
+            int[] liczby = { 2, 4, 6, 8 };
+
+            double srednia = CalculateAverage(liczby);
+
+            Console.WriteLine($"Średnia wynosi: {srednia}");
             
         }
 
@@ -60,7 +66,19 @@ namespace ProstaAplikacja
             }
             
         }
-    }
+        static double CalculateAverage(int[] values)
+        {
+            if (values == null || values.Length == 0)
+            throw new ArgumentException("Tablica nie może być pusta.");
 
-    
-}
+            int suma = 0;
+
+             foreach (int v in values)
+            {
+                 suma += v;
+             }
+
+            return (double)suma / values.Length;
+        }
+    }
+    }
